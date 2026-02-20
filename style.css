@@ -1,0 +1,143 @@
+/* Janet Asbury Artist - Site Stylesheet */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #333;
+  background: #fff;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 20px 0 10px;
+  color: #444;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin: 10px 0;
+  color: #555;
+}
+
+p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+a {
+  color: #5a7fa0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Homepage hero */
+.hero {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  margin: 30px 0 20px;
+  font-size: 0.95em;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+nav a {
+  margin: 0 4px;
+  color: #5a7fa0;
+}
+
+/* Gallery grid */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.gallery a {
+  display: block;
+}
+
+.gallery img {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  transition: opacity 0.2s;
+}
+
+.gallery img:hover {
+  opacity: 0.85;
+}
+
+/* Page intro text */
+.page-intro {
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+/* Placeholder notice for missing pages */
+.placeholder-notice {
+  background: #fff8e1;
+  border: 1px solid #f0c040;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 30px 0;
+  font-family: sans-serif;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 0.85em;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .gallery img {
+    width: 140px;
+    height: 110px;
+  }
+
+  nav {
+    font-size: 0.85em;
+  }
+}
