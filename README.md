@@ -1,47 +1,57 @@
 # Janet Asbury Artist Website
 
 Website for Janet Asbury, watercolor painting artist in Orlando Florida.
+Live at: https://drykod.github.io
 
-## Status
+## Pages
 
 | Page | Status |
 |------|--------|
-| Home (index.html) | ✅ Recovered |
-| Watercolors | ✅ Recovered (HTML only, images needed) |
-| Art and Poetry | ⚠️ Placeholder — content needs restoring |
-| Logo Art | ⚠️ Placeholder — content needs restoring |
-| Computer Art | ⚠️ Placeholder — content needs restoring |
-| Meet The Artist | ⚠️ Placeholder — content needs restoring |
-| Line Illustration | ⚠️ Placeholder — content needs restoring |
+| Home | ✅ Live |
+| Art and Poetry | ✅ Live |
+| Logo Art | ✅ Live |
+| Computer Art | ✅ Live |
+| Meet The Artist | ✅ Live |
+| Line Illustration | ✅ Live |
+| Watercolors | ✅ Live |
 
-## Images Needed
+## File Structure
 
-The following images need to be uploaded to the `uploads/tx_dmfgalleria/` folder:
-
-- Concert_Seat.jpg, Lands_End.jpg, Mike_at_6.jpg, My_First_Ocean.jpg
-- River_Porch.jpg, StRedempteur.jpg, Tiger.jpg, Ty_for_Mike.jpg
-- Violets.jpg, WPPergola2.jpg, noella.jpg, Morning_Tug.jpg
-- coco2.jpg, AH_PleinAir2.jpg, Art_Center_Gate2.jpg, Azaelas2.jpg
-- Debbiesmom3.jpg, Felix_Lucas2.jpg, PearsLR.jpg, Olivia3_copy.jpg
-- Faith___Happy2_copy.jpg, Heidi_Angel2.jpg, Joanne_s_Rose2.jpg, Old2.jpg
-- BeachHat2.jpg, Bougie2.jpg, Teaching_Brother.jpg, Little_Man_Jack.jpg
-- Patio_Aloe.jpg, My_Pond.jpg, Kotor_Reverie.jpg, Rosearden_2.jpg
-- Loris_Orchids.jpg, 1_Dorothy.jpg
-
-The homepage hero image goes in `JanetWebPage/Pond12FlatV2.jpg`.
-
-You can try to recover these from the Wayback Machine:
-https://web.archive.org/web/*/janetasburyartist.com/
+```
+/
+├── index.html                          # Homepage with clickable image map
+├── style.css                           # Shared stylesheet
+├── JanetWebPage/
+│   ├── Pond12FlatV2.jpg               # Homepage hero image
+│   └── AllTL_Cover.jpg                # Art and Poetry book cover
+├── uploads/tx_dmfgalleria/            # All gallery images
+├── fileadmin/
+│   ├── templates/main/images/
+│   │   ├── style_sheet_6.jpg          # Meet The Artist background
+│   │   └── About-the-artist-Janet-Asbury.png
+│   └── user_upload/
+│       └── AllTL-Sample_Page.png      # Art and Poetry sample page
+├── art-and-poetry/index.html
+├── logo-art/index.html
+├── computer-art/index.html
+├── meet-the-artist/index.html
+├── line-illustration/index.html
+└── watercolors/index.html
+```
 
 ## GitHub Pages Setup
 
-In your GitHub repository settings → Pages → Source: Deploy from branch `main`, folder `/`.
+Settings → Pages → Source: Deploy from branch `main`, folder `/`.
 
 ## Custom Domain
 
-After deploying, add `janetasburyartist.com` as a custom domain in Settings → Pages,
-then update your DNS A records to point to:
-- 185.199.108.153
-- 185.199.109.153
-- 185.199.110.153
-- 185.199.111.153
+To point `janetasburyartist.com` to this site:
+
+1. In Settings → Pages, add `janetasburyartist.com` as a custom domain
+2. Update DNS A records at your domain registrar to:
+   - 185.199.108.153
+   - 185.199.109.153
+   - 185.199.110.153
+   - 185.199.111.153
+3. Add a CNAME record: `www` → `drykod.github.io`
+4. Enable **Enforce HTTPS** once DNS propagates (may take up to 24 hours)
