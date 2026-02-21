@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watercolor artist Orlando Florida: Janet Asbury</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 528px;
+      margin: 0 auto;
+      display: block;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    map area {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="JanetWebPage/Pond12FlatV2.jpg"
+         alt="Watercolor Pond by Janet Asbury Artist"
+         usemap="#pondmap"
+         id="pondimg">
+  </div>
+
+  <map name="pondmap">
+    <!-- Art and Poetry - top center lily pad -->
+    <area shape="circle" coords="272,130,55" href="/art-and-poetry/" alt="Art and Poetry">
+    <!-- Logo Art - middle center lily pad -->
+    <area shape="circle" coords="258,248,60" href="/logo-art/" alt="Logo Art">
+    <!-- Meet The Artist - middle right near fish -->
+    <area shape="circle" coords="370,295,50" href="/meet-the-artist/" alt="Meet The Artist">
+    <!-- Computer Art - left large lily pad -->
+    <area shape="circle" coords="95,315,75" href="/computer-art/" alt="Computer Art">
+    <!-- Line Illustration - center lily pad -->
+    <area shape="circle" coords="215,370,60" href="/line-illustration/" alt="Line Illustration">
+    <!-- Watercolors - lower large lily pad -->
+    <area shape="circle" coords="230,555,80" href="/watercolors/" alt="Watercolors">
+  </map>
+
+  <!-- Responsive image map script -->
+  <script>
+    function resizeMap() {
+      var img = document.getElementById('pondimg');
+      var naturalW = 528;
+      var displayW = img.offsetWidth;
+      var ratio = displayW / naturalW;
+      var areas = document.querySelectorAll('map area');
+      var origCoords = [
+        [272,130,55],
+        [258,248,60],
+        [370,295,50],
+        [95,315,75],
+        [215,370,60],
+        [230,555,80]
+      ];
+      areas.forEach(function(area, i) {
+        var c = origCoords[i];
+        area.coords = Math.round(c[0]*ratio) + ',' + Math.round(c[1]*ratio) + ',' + Math.round(c[2]*ratio);
+      });
+    }
+    window.addEventListener('load', resizeMap);
+    window.addEventListener('resize', resizeMap);
+  </script>
+
+  <div class="intro">
+    <h1><a href="/watercolors/">Janet Asbury Artist</a></h1>
+    <h2><a href="/watercolors/">Watercolor painting artist in Orlando Florida</a></h2>
+    <p>Welcome! I am Janet Asbury, watercolor painting artist in Orlando Florida and member of the Central Florida Watercolor Society. Please enjoy my samples. If you need something drawn, by hand or on my Mac... contact me.</p>
+  </div>
+
+  <hr>
+
+  <nav>
+    <a href="/" title="Home">Home</a> |
+    <a href="/art-and-poetry/" title="Art and Poetry">Art and Poetry</a> |
+    <a href="/logo-art/" title="Logo Art">Logo Art</a> |
+    <a href="/computer-art/" title="Computer Art">Computer Art</a> |
+    <a href="/meet-the-artist/" title="Meet The Artist">Meet The Artist</a> |
+    <a href="/line-illustration/" title="Line Illustration">Line Illustration</a> |
+    <a href="/watercolors/" title="Watercolors">Watercolors</a>
+  </nav>
+
+  <footer>
+    <p>Copyright &copy; 2012-2020 Janet Asbury</p>
+  </footer>
+
+  <script type="text/javascript">var sc_project=7765993; var sc_invisible=1; var sc_security="8b10e5f0";</script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+
+</body>
+</html>
